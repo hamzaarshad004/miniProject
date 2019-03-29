@@ -1,0 +1,34 @@
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\bin\Debug\ProjectA.exe.config
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\bin\Debug\ProjectA.exe
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\bin\Debug\ProjectA.pdb
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddStudent.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Login.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Properties.Resources.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csproj.GenerateResource.cache
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csproj.CoreCompileInputs.cache
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.exe
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.pdb
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.csprojAssemblyReference.cache
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddAdvisor.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddProject.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.MakeGroups.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.CreateGroup.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.Show_Groups.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\ProjectA\ProjectA\obj\Debug\ProjectA.AddEvaluation.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\bin\Debug\ProjectA.exe.config
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\bin\Debug\ProjectA.exe
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\bin\Debug\ProjectA.pdb
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.csprojAssemblyReference.cache
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.AddAdvisor.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.AddEvaluation.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.AddProject.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.AddStudent.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.CreateGroup.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.Login.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.MakeGroups.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.Properties.Resources.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.Show_Groups.resources
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.csproj.GenerateResource.cache
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.csproj.CoreCompileInputs.cache
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.exe
+C:\Users\Hamza\Desktop\ProjectA\ProjectA-master\ProjectA\obj\Debug\ProjectA.pdb
