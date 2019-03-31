@@ -35,6 +35,7 @@
             this.lblGroupId = new System.Windows.Forms.Label();
             this.lblAssgntDate = new System.Windows.Forms.Label();
             this.btnAssignProject = new System.Windows.Forms.Button();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // cmbTitle
@@ -102,11 +103,24 @@
             this.btnAssignProject.UseVisualStyleBackColor = true;
             this.btnAssignProject.Click += new System.EventHandler(this.btnAssignProject_Click);
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(592, 358);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 18;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // GroupProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 391);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.btnAssignProject);
             this.Controls.Add(this.lblAssgntDate);
             this.Controls.Add(this.lblGroupId);
@@ -131,5 +145,6 @@
         private System.Windows.Forms.Label lblGroupId;
         private System.Windows.Forms.Label lblAssgntDate;
         private System.Windows.Forms.Button btnAssignProject;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

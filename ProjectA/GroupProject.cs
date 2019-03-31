@@ -23,32 +23,41 @@ namespace ProjectA
             cmbTitle.Items.Clear();
             cmbGroupId.Items.Clear();
 
-            SqlConnection con = new SqlConnection(AddProject.conStr);
-            con.Open();
-
-            if (con.State == ConnectionState.Open)
+            try
             {
-                string fetch = "SELECT Title FROM Project WHERE Id NOT IN (SELECT ProjectId FROM GroupProject)";
-                SqlCommand cmd = new SqlCommand(fetch, con);
+                SqlConnection con = new SqlConnection(AddProject.conStr);
+                con.Open();
 
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                if (con.State == ConnectionState.Open)
                 {
-                    cmbTitle.Items.Add(reader["Title"]);
-                }
+                    string fetch = "SELECT Title FROM Project WHERE Id NOT IN (SELECT ProjectId FROM GroupProject)";
+                    SqlCommand cmd = new SqlCommand(fetch, con);
 
-                reader.Close();
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                cmd.CommandText = "SELECT Id FROM [dbo].[Group] WHERE Id NOT IN (SELECT GroupId FROM GroupProject)";
+                    while (reader.Read())
+                    {
+                        cmbTitle.Items.Add(reader["Title"]);
+                    }
 
-                reader = cmd.ExecuteReader();
+                    reader.Close();
 
-                while (reader.Read())
-                {
-                    cmbGroupId.Items.Add(reader["Id"]);
+                    cmd.CommandText = "SELECT Id FROM [dbo].[Group] WHERE Id NOT IN (SELECT GroupId FROM GroupProject)";
+
+                    reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        cmbGroupId.Items.Add(reader["Id"]);
+                    }
                 }
             }
+            catch
+            {
+                MessageBox.Show("Some Error Occured");
+            }
+
+           
         }
 
         private void GroupProject_Load(object sender, EventArgs e)
@@ -58,20 +67,36 @@ namespace ProjectA
 
         private void btnAssignProject_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(AddProject.conStr);
-            con.Open();
-
-            if (con.State == ConnectionState.Open)
+            try
             {
-                string Insert = "INSERT INTO GroupProject(ProjectId, GroupId, AssignmentDate) VALUES ((SELECT Id FROM Project WHERE Title = '" + Convert.ToString(cmbTitle.Text) + "'), '" + Convert.ToInt32(cmbGroupId.Text) + "', '" + Convert.ToDateTime(dtAssgmtDate.Value) + "')";
-                SqlCommand cmd = new SqlCommand(Insert, con);
+                SqlConnection con = new SqlConnection(AddProject.conStr);
+                con.Open();
 
-                cmd.ExecuteNonQuery();
+                if (con.State == ConnectionState.Open)
+                {
+                    string Insert = "INSERT INTO GroupProject(ProjectId, GroupId, AssignmentDate) VALUES ((SELECT Id FROM Project WHERE Title = '" + Convert.ToString(cmbTitle.Text) + "'), '" + Convert.ToInt32(cmbGroupId.Text) + "', '" + Convert.ToDateTime(dtAssgmtDate.Value) + "')";
+                    SqlCommand cmd = new SqlCommand(Insert, con);
 
-                MessageBox.Show("Succesfully Added");
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Succesfully Added");
+                }
+
+                setCmbBoxes();
+            }
+            catch
+            {
+                MessageBox.Show("Some Error Occured");
             }
 
-            setCmbBoxes();
+            
+        }
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login L = new Login();
+            L.Show();
         }
     }
 }

@@ -112,20 +112,33 @@ namespace ProjectA
                             {
                                 Insert = "INSERT INTO Person(FirstName, LastName, Contact, Email, DateOfBirth, Gender) VALUES('" + Convert.ToString(txtFirstName.Text) + "', '" + Convert.ToString(txtLastName.Text) + "','" + Convert.ToString(txtContact.Text) + "', '" + Convert.ToString(txtEmail.Text) + "','" + Convert.ToDateTime(dtDOB.Value) + "', '" + 2 + "')";
                             }
-                            int ID;
-                            SqlCommand cmd = new SqlCommand(Insert, con);
-                            cmd.ExecuteNonQuery();
-                            cmd.CommandText = "SELECT @@IDENTITY";
-                            ID = Convert.ToInt32(cmd.ExecuteScalar());
-                            string StudentInsert = "INSERT INTO Student(Id, RegistrationNo) VALUES('" + ID + "','" + Convert.ToString(txtRegNo.Text) + "')";
-                            SqlCommand sqlCommand = new SqlCommand(StudentInsert, con);
-                            sqlCommand.ExecuteNonQuery();
+                            string check = "SELECT Id FROM Student WHERE RegistrationNo = '" + Convert.ToString(txtRegNo.Text) + "'";
+                            SqlCommand cmd1 = new SqlCommand(check, con);
+                            SqlDataReader read = cmd1.ExecuteReader();
+                            if (!read.Read())
+                            {
+                                int ID;
+                                SqlCommand cmd = new SqlCommand(Insert, con);
+                                cmd.ExecuteNonQuery();
+                                cmd.CommandText = "SELECT @@IDENTITY";
+                                ID = Convert.ToInt32(cmd.ExecuteScalar());
+                                string StudentInsert = "INSERT INTO Student(Id, RegistrationNo) VALUES('" + ID + "','" + Convert.ToString(txtRegNo.Text) + "')";
+                                SqlCommand sqlCommand = new SqlCommand(StudentInsert, con);
+                                sqlCommand.ExecuteNonQuery();
 
-                            setGrid();
-                            setNull();
+                                setGrid();
+                                setNull();
+
+                                MessageBox.Show("Data Succesfully Inserted");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Reg No Already Exists");
+                            }
+                            
                         }
 
-                        MessageBox.Show("Data Succesfully Inserted");
+                       
                     }
                     catch (Exception ex)
                     {

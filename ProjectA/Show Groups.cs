@@ -76,32 +76,47 @@ namespace ProjectA
         {
             if (e.ColumnIndex == 0)
             {
-                SqlConnection con = new SqlConnection(AddProject.conStr);
-                con.Open();
-
-                if (con.State == ConnectionState.Open)
+                try
                 {
-                    int id = students[e.RowIndex].ID1;
-                    if (students[e.RowIndex].Status1 == "Active")
-                    {
-                        string Update = "UPDATE GroupStudent SET Status = '" + 4 + "' WHERE StudentId = '" + id + "'";
-                        SqlCommand cmd = new SqlCommand(Update, con);
-                        cmd.ExecuteNonQuery();
+                    SqlConnection con = new SqlConnection(AddProject.conStr);
+                    con.Open();
 
-                        MessageBox.Show("Succesfully Updated");
-                        setGrid1();
-                    }
-                    else
+                    if (con.State == ConnectionState.Open)
                     {
-                        string Update = "UPDATE GroupStudent SET Status = '" + 3 + "' WHERE StudentId = '" + id + "'";
-                        SqlCommand cmd = new SqlCommand(Update, con);
-                        cmd.ExecuteNonQuery();
+                        int id = students[e.RowIndex].ID1;
+                        if (students[e.RowIndex].Status1 == "Active")
+                        {
+                            string Update = "UPDATE GroupStudent SET Status = '" + 4 + "' WHERE StudentId = '" + id + "'";
+                            SqlCommand cmd = new SqlCommand(Update, con);
+                            cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Succesfully Updated");
-                        setGrid1();
+                            MessageBox.Show("Succesfully Updated");
+                            setGrid1();
+                        }
+                        else
+                        {
+                            string Update = "UPDATE GroupStudent SET Status = '" + 3 + "' WHERE StudentId = '" + id + "'";
+                            SqlCommand cmd = new SqlCommand(Update, con);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Succesfully Updated");
+                            setGrid1();
+                        }
                     }
                 }
+                catch
+                {
+                    MessageBox.Show("Some Error Occured");
+                }
+                
             }
+        }
+
+        private void lblAssignStudents_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            CreateGroup CG = new CreateGroup();
+            CG.Show();
         }
     }
 }

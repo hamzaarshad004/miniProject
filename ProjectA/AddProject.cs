@@ -13,7 +13,7 @@ namespace ProjectA
 {
     public partial class AddProject : Form
     {
-        public static string conStr = "Data Source=DESKTOP-P69CV50;Initial Catalog=ProjectA;Integrated Security=True";
+        public static string conStr = "Data Source=DESKTOP-P69CV50;Initial Catalog=ProjectA;Integrated Security=True;MultipleActiveResultSets=True";
         int Mode = 0, Id; // 0 For Add, 1 For Edit
         List<Project> showprojects = new List<Project>();
 
@@ -21,6 +21,7 @@ namespace ProjectA
         {
             InitializeComponent();
         }
+
 
         private void btnAddProject_Click(object sender, EventArgs e)
         {

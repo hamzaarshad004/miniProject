@@ -37,6 +37,7 @@
             this.cmbAdvisorRole = new System.Windows.Forms.ComboBox();
             this.dtAssignmentDate = new System.Windows.Forms.DateTimePicker();
             this.btnAssignAdvisor = new System.Windows.Forms.Button();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblProjectId
@@ -125,11 +126,24 @@
             this.btnAssignAdvisor.UseVisualStyleBackColor = true;
             this.btnAssignAdvisor.Click += new System.EventHandler(this.btnAssignAdvisor_Click);
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(752, 507);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 18;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // AssignAdvisors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 540);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.btnAssignAdvisor);
             this.Controls.Add(this.dtAssignmentDate);
             this.Controls.Add(this.cmbAdvisorRole);
@@ -158,5 +172,6 @@
         private System.Windows.Forms.ComboBox cmbAdvisorRole;
         private System.Windows.Forms.DateTimePicker dtAssignmentDate;
         private System.Windows.Forms.Button btnAssignAdvisor;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

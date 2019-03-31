@@ -51,3 +51,7 @@ E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debu
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debug\ProjectA.GroupEvaluation.resources
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debug\ProjectA.AssignAdvisors.resources
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debug\ProjectA.GroupProject.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debug\ProjectA.ProjectReports.resources
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\bin\Debug\itextsharp.dll
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\bin\Debug\itextsharp.xml
+E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debug\ProjectA.csproj.CopyComplete

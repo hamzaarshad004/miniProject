@@ -39,6 +39,7 @@
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.lblBack = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSelectedStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,12 +77,12 @@
             // 
             this.lblAssignStudents.AutoSize = true;
             this.lblAssignStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssignStudents.Location = new System.Drawing.Point(459, 553);
+            this.lblAssignStudents.Location = new System.Drawing.Point(495, 564);
             this.lblAssignStudents.Name = "lblAssignStudents";
-            this.lblAssignStudents.Size = new System.Drawing.Size(232, 24);
+            this.lblAssignStudents.Size = new System.Drawing.Size(196, 24);
             this.lblAssignStudents.TabIndex = 4;
             this.lblAssignStudents.TabStop = true;
-            this.lblAssignStudents.Text = "Assign Students to Groups";
+            this.lblAssignStudents.Text = "Show Created Groups";
             this.lblAssignStudents.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblAssignStudents_LinkClicked);
             // 
             // mcCreationDate
@@ -151,11 +152,24 @@
             this.cmbStatus.Size = new System.Drawing.Size(183, 24);
             this.cmbStatus.TabIndex = 10;
             // 
+            // lblBack
+            // 
+            this.lblBack.AutoSize = true;
+            this.lblBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBack.Location = new System.Drawing.Point(12, 564);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Size = new System.Drawing.Size(166, 24);
+            this.lblBack.TabIndex = 18;
+            this.lblBack.TabStop = true;
+            this.lblBack.Text = "Back to Main Page";
+            this.lblBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblBack_LinkClicked);
+            // 
             // CreateGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 597);
+            this.Controls.Add(this.lblBack);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.btnAddStudent);
@@ -189,5 +203,6 @@
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.LinkLabel lblBack;
     }
 }

@@ -35,18 +35,28 @@ namespace ProjectA
             {
                 if (con.State == ConnectionState.Open)
                 {
-                    string Insert = "INSERT INTO [dbo].[Group](Created_On) VALUES ('" + Convert.ToDateTime(mcCreationDate.Value) + "')";
-                    SqlCommand cmd = new SqlCommand(Insert, con);
-                    cmd.ExecuteNonQuery();
-
-                    cmd.CommandText = "SELECT @@IDENTITY";
-                    GroupId = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    for (int i = 0; i < check; i++)
+                    try
                     {
-                        Insert = "INSERT INTO GroupStudent(GroupId, StudentId, Status, AssignmentDate) VALUES ('" + GroupId + "', (SELECT Id FROM Student WHERE RegistrationNo = '" + Selectedstudents[i].Registration_Number1 + "'), (SELECT Id FROM Lookup WHERE Lookup.Value = '" + Status[i] + "'), '"+ Convert.ToDateTime(mcCreationDate.Value) +"' )";
-                        cmd.CommandText = Insert;
+                        string Insert = "INSERT INTO [dbo].[Group](Created_On) VALUES ('" + Convert.ToDateTime(mcCreationDate.Value) + "')";
+                        SqlCommand cmd = new SqlCommand(Insert, con);
                         cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = "SELECT @@IDENTITY";
+                        GroupId = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        for (int i = 0; i < check; i++)
+                        {
+                            Insert = "INSERT INTO GroupStudent(GroupId, StudentId, Status, AssignmentDate) VALUES ('" + GroupId + "', (SELECT Id FROM Student WHERE RegistrationNo = '" + Selectedstudents[i].Registration_Number1 + "'), (SELECT Id FROM Lookup WHERE Lookup.Value = '" + Status[i] + "'), '" + Convert.ToDateTime(mcCreationDate.Value) + "' )";
+                            cmd.CommandText = Insert;
+                            cmd.ExecuteNonQuery();
+                        }
+
+                       
+                        MessageBox.Show("Succesfully Created");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Some Error Occured");
                     }
 
                     check = 0;
@@ -55,17 +65,26 @@ namespace ProjectA
                     Selectedstudents.Clear();
                     setGrid();
 
-                    MessageBox.Show("Succesfully Created");
                 }
             }
             else
             {
-                for (int i = 0; i < check; i++)
+                try
                 {
-                    string Insert = "INSERT INTO GroupStudent(GroupId, StudentId, Status, AssignmentDate) VALUES ('" + GroupId + "', (SELECT Id FROM Student WHERE RegistrationNo = '" + Selectedstudents[i].Registration_Number1 + "'), (SELECT Id FROM Lookup WHERE Lookup.Value = '" + Status[i] + "'), '" + Convert.ToDateTime(mcCreationDate.Value) + "' )";
-                    SqlCommand cmd = new SqlCommand(Insert, con);
-                    cmd.ExecuteNonQuery();
+                    for (int i = 0; i < check; i++)
+                    {
+                        string Insert = "INSERT INTO GroupStudent(GroupId, StudentId, Status, AssignmentDate) VALUES ('" + GroupId + "', (SELECT Id FROM Student WHERE RegistrationNo = '" + Selectedstudents[i].Registration_Number1 + "'), (SELECT Id FROM Lookup WHERE Lookup.Value = '" + Status[i] + "'), '" + Convert.ToDateTime(mcCreationDate.Value) + "' )";
+                        SqlCommand cmd = new SqlCommand(Insert, con);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Succesfully Updated");
+                    }
                 }
+                catch
+                {
+                    MessageBox.Show("Some Error Occured");
+                }
+               
 
                 check = 0;
 
@@ -73,7 +92,6 @@ namespace ProjectA
                 Selectedstudents.Clear();
                 setGrid();
 
-                MessageBox.Show("Succesfully Updated");
 
                 Mode = 0;
 
@@ -98,25 +116,33 @@ namespace ProjectA
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                string fetch = "SELECT RegistrationNo FROM Student WHERE Id NOT IN (SELECT StudentId FROM GroupStudent)";
-                SqlCommand cmd = new SqlCommand(fetch, con);
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
+                try
                 {
-                    Student s = new Student();
-                    s.Registration_Number1 = Convert.ToString(reader["RegistrationNo"]);
+                    string fetch = "SELECT RegistrationNo FROM Student WHERE Id NOT IN (SELECT StudentId FROM GroupStudent)";
+                    SqlCommand cmd = new SqlCommand(fetch, con);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                    students.Add(s);
+                    while (reader.Read())
+                    {
+                        Student s = new Student();
+                        s.Registration_Number1 = Convert.ToString(reader["RegistrationNo"]);
+
+                        students.Add(s);
+                    }
+
+                    foreach (Student s in students)
+                    {
+                        cmbRegNo.Items.Add(s.Registration_Number1);
+                    }
+
+                    dgvSelectedStudents.Columns.Add("Id", "Sr#");
+                    dgvSelectedStudents.Columns.Add("RegNo", "Registration No");
                 }
-
-                foreach (Student s in students)
+                catch
                 {
-                    cmbRegNo.Items.Add(s.Registration_Number1);
+                    MessageBox.Show("Some Error Occured");
                 }
-
-                dgvSelectedStudents.Columns.Add("Id", "Sr#");
-                dgvSelectedStudents.Columns.Add("RegNo", "Registration No");
+               
             }
         }
 
@@ -169,6 +195,13 @@ namespace ProjectA
                 dgvSelectedStudents.Rows.Add(id, student.Registration_Number1);
                 id++;
             }
+        }
+
+        private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login L = new Login();
+            L.Show();
         }
     }
 }

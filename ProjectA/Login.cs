@@ -61,5 +61,40 @@ namespace ProjectA
             AddEvaluation AE = new AddEvaluation();
             AE.Show();
         }
+
+        private void btnAssgnProject_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GroupProject GP = new GroupProject();
+            GP.Show();
+        }
+
+        private void btnEvalGroups_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GroupEvaluation GE = new GroupEvaluation();
+            GE.Show();
+        }
+
+        private void btnAssgnAdvisor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AssignAdvisors AA = new AssignAdvisors();
+            AA.Show();
+        }
+
+        private void btnGroups_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateGroup CG = new CreateGroup();
+            CG.Show();
+        }
+
+        private void btnProjectReports_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProjectReports PR = new ProjectReports();
+            PR.Show();
+        }
     }
 }
