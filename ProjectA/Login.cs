@@ -26,7 +26,7 @@ namespace ProjectA
             AD.Show();
             AddProject AP = new AddProject();
             AP.Show();
-            MakeGroups MG = new MakeGroups();
+            //MakeGroups MG = new MakeGroups();
             //MG.Show();
             CreateGroup CG = new CreateGroup();
             //CG.Show();

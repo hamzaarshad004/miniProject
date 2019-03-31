@@ -17,6 +17,7 @@ namespace ProjectA
         public string conStr = "Data Source=DESKTOP-P69CV50;Initial Catalog=ProjectA;Integrated Security=True";
         public static int Mode = 0; // 0 For Add, 1 For Edit
         public int StudentID;
+        public int GroupId;
         List<Student> GetStudents = new List<Student>();
 
         private void dgvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -80,6 +81,7 @@ namespace ProjectA
         {
             InitializeComponent();
         }
+
 
         private void AddStudent_Load(object sender, EventArgs e)
         {
@@ -189,13 +191,21 @@ namespace ProjectA
             SS.Show();
         }*/
 
-        private void setGrid()
+        public void setGrid()
         {
-            Student.ShowStudents();
-            GetStudents = Student.students;
-            BindingSource s = new BindingSource();
-            s.DataSource = GetStudents;
-            dgvStudents.DataSource = s;
+                Student.ShowStudents();
+                GetStudents = Student.students;
+                BindingSource s = new BindingSource();
+                s.DataSource = GetStudents;
+                dgvStudents.DataSource = s;
+            /*else
+            {
+                Student.ShowStudents(id, 1);
+                GetStudents = Student.students;
+                BindingSource s = new BindingSource();
+                s.DataSource = GetStudents;
+                dgvStudents.DataSource = s;
+            }*/
         }
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

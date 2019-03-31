@@ -136,12 +136,22 @@ namespace ProjectA
                 {
                     int Delete_Id = Project.projects[e.RowIndex].Id1;
                     string Delete = "DELETE FROM Project WHERE Id = '" + Delete_Id + "'";
+                    string Delete2 = "DELETE FROM GroupProject WHERE WHERE ProjectId = '" + Delete_Id + "' ";
+                    string Delete3 = "DELETE FROM ProjectAdvisor WHERE ProjectId = '" + Delete_Id + "'";
                     SqlConnection con = new SqlConnection(conStr);
                     con.Open();
                     if (con.State == ConnectionState.Open)
                     {
                         SqlCommand cmd = new SqlCommand(Delete, con);
                         cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = Delete2;
+                        cmd.ExecuteNonQuery();
+
+                        cmd.CommandText = Delete3;
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Succesfully Deleted");
                     }
                     setGrid();
                 }

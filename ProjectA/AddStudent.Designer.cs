@@ -178,7 +178,7 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(883, 251);
+            this.btnAddStudent.Location = new System.Drawing.Point(883, 240);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(112, 38);
             this.btnAddStudent.TabIndex = 14;
