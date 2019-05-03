@@ -61,6 +61,8 @@ namespace ProjectA
             BindingSource s = new BindingSource();
             s.DataSource = groups;
             dgvGroups.DataSource = s;
+
+            dgvGroups.AllowUserToAddRows = false;
         }
 
         private void setGrid1()
@@ -70,6 +72,8 @@ namespace ProjectA
             BindingSource S = new BindingSource();
             S.DataSource = students;
             dgvViewStudents.DataSource = S;
+
+            dgvViewStudents.AllowUserToAddRows = false;
         }
 
         private void dgvViewStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)

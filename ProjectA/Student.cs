@@ -79,7 +79,9 @@ namespace ProjectA
 
                         students.Add(s);
                     }
+                    connection.Close();
                 }
+
             }
             
         }
@@ -117,6 +119,7 @@ namespace ProjectA
 
                     students.Add(s);
                 }
+                connection.Close();
             }
         }
     }

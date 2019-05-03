@@ -55,3 +55,26 @@ E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debu
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\bin\Debug\itextsharp.dll
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\bin\Debug\itextsharp.xml
 E:\University Stuff\6th Semester\DBMS\Lab\ProjectA\miniProject\ProjectA\obj\Debug\ProjectA.csproj.CopyComplete
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\bin\Debug\ProjectA.exe.config
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\bin\Debug\ProjectA.exe
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\bin\Debug\ProjectA.pdb
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\bin\Debug\itextsharp.dll
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\bin\Debug\itextsharp.xml
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.csprojAssemblyReference.cache
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.AddAdvisor.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.AddEvaluation.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.AddProject.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.AddStudent.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.AssignAdvisors.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.CreateGroup.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.GroupEvaluation.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.GroupProject.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.Login.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.ProjectReports.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.Properties.Resources.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.Show_Groups.resources
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.csproj.GenerateResource.cache
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.csproj.CoreCompileInputs.cache
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.csproj.CopyComplete
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.exe
+C:\Users\Hamza\Desktop\DB\miniProject\ProjectA\obj\Debug\ProjectA.pdb

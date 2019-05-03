@@ -195,6 +195,8 @@ namespace ProjectA
                 dgvSelectedStudents.Rows.Add(id, student.Registration_Number1);
                 id++;
             }
+
+            dgvSelectedStudents.AllowUserToAddRows = false;
         }
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

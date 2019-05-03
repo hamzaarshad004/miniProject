@@ -28,6 +28,8 @@ namespace ProjectA
             BindingSource s = new BindingSource();
             s.DataSource = evaluations;
             dgvEvaluations.DataSource = s;
+
+            dgvEvaluations.AllowUserToAddRows = false;
         }
 
         private void dgvEvaluations_CellContentClick(object sender, DataGridViewCellEventArgs e)

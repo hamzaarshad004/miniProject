@@ -169,6 +169,8 @@ namespace ProjectA
             s.DataSource = advisors;
             dgvAdvisors.DataSource = s;
 
+            dgvAdvisors.AllowUserToAddRows = false;
+
         }
 
         private void setNull()

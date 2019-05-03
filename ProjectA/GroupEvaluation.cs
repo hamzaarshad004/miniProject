@@ -160,6 +160,8 @@ namespace ProjectA
             BindingSource s = new BindingSource();
             s.DataSource = GroupEvals;
             dgvGroupEvals.DataSource = s;
+
+            dgvGroupEvals.AllowUserToAddRows = false;
         }
 
         private void dgvGroupEvals_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -237,6 +237,8 @@ namespace ProjectA
             BindingSource S = new BindingSource();
             S.DataSource = projectReports;
             dgvReport.DataSource = S;
+
+            dgvReport.AllowUserToAddRows = false;
         }
     }
 }

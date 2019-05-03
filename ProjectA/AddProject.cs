@@ -98,6 +98,8 @@ namespace ProjectA
             showprojects = Project.projects;
             s.DataSource = showprojects;
             dgvProjects.DataSource = s;
+
+            dgvProjects.AllowUserToAddRows = false;
         }
 
         private void lblBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

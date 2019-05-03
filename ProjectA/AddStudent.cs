@@ -118,6 +118,7 @@ namespace ProjectA
                             if (!read.Read())
                             {
                                 int ID;
+                                read.Close();
                                 SqlCommand cmd = new SqlCommand(Insert, con);
                                 cmd.ExecuteNonQuery();
                                 cmd.CommandText = "SELECT @@IDENTITY";
@@ -206,11 +207,14 @@ namespace ProjectA
 
         public void setGrid()
         {
-                Student.ShowStudents();
-                GetStudents = Student.students;
-                BindingSource s = new BindingSource();
-                s.DataSource = GetStudents;
-                dgvStudents.DataSource = s;
+            Student.ShowStudents();
+            GetStudents = Student.students;
+            BindingSource s = new BindingSource();
+            s.DataSource = GetStudents;
+            dgvStudents.DataSource = s;
+
+            dgvStudents.AllowUserToAddRows = false;
+
             /*else
             {
                 Student.ShowStudents(id, 1);
